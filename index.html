@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Crumb & Co. by MRYM — freshly baked cookies, cakes and pastries made with love."
+    >
+
+    <title>Crumb & Co. by MRYM | Bakery & Patisserie</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement">
+        Freshly baked with love, every single day ♡
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <!-- Logo -->
+        <a href="#home" class="logo" aria-label="Crumb and Co. by MRYM home">
+
+            <span class="logo-flourish">✧ ❧ ✧</span>
+
+            <span class="logo-name">
+                Crumb <span>&amp;</span> Co.
+            </span>
+
+            <span class="logo-subtitle">
+                BAKERY &amp; PATISSERIE
+            </span>
+
+            <span class="creator-name">
+                by MRYM
+            </span>
+
+        </a>
+
+
+        <!-- Mobile menu button -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mainNav"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <!-- Navigation -->
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+
+            <a href="#home" class="nav-link active">Home</a>
+
+            <a href="#shop" class="nav-link">Shop</a>
+
+            <a href="#cakes" class="nav-link">Cakes</a>
+
+            <a href="#cookies" class="nav-link">Cookies</a>
+
+            <a href="#pastries" class="nav-link">Pastries</a>
+
+            <a href="#about" class="nav-link">About</a>
+
+            <a href="#contact" class="nav-link">Contact</a>
+
+        </nav>
+
+
+        <!-- Header actions -->
+        <div class="header-actions">
+
+            <button
+                class="icon-button"
+                id="searchButton"
+                type="button"
+                aria-label="Search products"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10.8" cy="10.8" r="7.2"></circle>
+                    <path d="M16 16 L21 21"></path>
+                </svg>
+            </button>
+
+
+            <button
+                class="icon-button"
+                id="accountButton"
+                type="button"
+                aria-label="Customer account"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M4 21 V18 A8 8 0 0 1 20 18 V21"></path>
+                </svg>
+            </button>
+
+
+            <button
+                class="icon-button cart-button"
+                id="cartButton"
+                type="button"
+                aria-label="Shopping cart"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2 3 H5 L8 16 H19 L22 7 H6"></path>
+                    <circle cx="10" cy="21" r="1.5"></circle>
+                    <circle cx="19" cy="21" r="1.5"></circle>
+                </svg>
+
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- SEARCH PANEL -->
+    <div class="search-panel" id="searchPanel" hidden>
+
+        <label for="siteSearch">Find your favourite treats</label>
+
+        <div class="search-input-row">
+
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search cookies, cakes..."
+            >
+
+            <button type="button" id="searchSubmit">
+                Search
+            </button>
+
+        </div>
+
+        <p id="searchMessage" aria-live="polite"></p>
+
+    </div>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+
+            <!-- LEFT: TEXT -->
+            <div class="hero-content">
+
+                <p class="hero-tagline">
+                    Freshly Baked Happiness
+                    <span>♡</span>
+                </p>
+
+
+                <h1>
+                    Crumb &amp; Co.
+                </h1>
+
+
+                <p class="hero-categories">
+                    COOKIES <span>•</span>
+                    CAKES <span>•</span>
+                    PASTRIES <span>•</span>
+                    MORE
+                </p>
+
+
+                <p class="hero-description">
+                    Artisanal treats made with love, real ingredients
+                    and a little bit of magic.
+                </p>
+
+
+                <!-- Buttons -->
+                <div class="hero-buttons">
+
+                    <a href="#cookies" class="button button-primary">
+                        Shop Cookies <span aria-hidden="true">→</span>
+                    </a>
+
+                    <a href="#shop" class="button button-secondary">
+                        Explore Menu
+                    </a>
+
+                </div>
+
+
+                <!-- HERO HIGHLIGHTS -->
+                <div class="hero-highlights">
+
+                    <div class="highlight">
+
+                        <svg viewBox="0 0 40 40" aria-hidden="true">
+                            <path d="M20 35 V17"></path>
+                            <path d="M20 22 C5 22 4 12 4 5 C15 5 20 12 20 22"></path>
+                            <path d="M20 17 C20 7 28 4 36 5 C36 17 29 23 20 25"></path>
+                        </svg>
+
+                        <p>
+                            <strong>100%</strong>
+                            <span>Natural Ingredients</span>
+                        </p>
+
+                    </div>
+
+
+                    <div class="highlight">
+
+                        <svg viewBox="0 0 40 40" aria-hidden="true">
+                            <path d="M20 35 S3 25 3 13 C3 4 14 2 20 12 C26 2 37 4 37 13 C37 25 20 35 20 35 Z"></path>
+                        </svg>
+
+                        <p>
+                            <strong>Freshly</strong>
+                            <span>Baked Daily</span>
+                        </p>
+
+                    </div>
+
+
+                    <div class="highlight">
+
+                        <svg viewBox="0 0 40 40" aria-hidden="true">
+                            <path d="M3 24 H26 V9 H15 L10 16 H3 Z"></path>
+                            <path d="M26 16 H33 L38 22 V24 H26 Z"></path>
+                            <circle cx="10" cy="28" r="4"></circle>
+                            <circle cx="31" cy="28" r="4"></circle>
+                        </svg>
+
+                        <p>
+                            <strong>Pan India</strong>
+                            <span>Delivery</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT: REAL COOKIE PHOTO -->
+            <div class="hero-art">
+
+                <img
+                    src="./images/hero.cookies.png.jpeg"
+                    alt="Freshly baked chocolate chip cookies with rich chocolate chunks"
+                    class="hero-cookie-image"
+                    fetchpriority="high"
+                >
+
+                <!-- Small decorative label -->
+                <div class="image-label">
+                    <span>♡</span>
+                    Baked fresh,<br>
+                    made with love
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM FEATURES -->
+        <section class="features" aria-label="Our bakery promises">
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <svg viewBox="0 0 48 48" aria-hidden="true">
+                        <path d="M24 42 V24"></path>
+                        <path d="M24 29 C10 29 8 20 8 12 C19 12 24 19 24 29"></path>
+                        <path d="M24 24 C24 13 33 9 41 11 C41 22 34 29 24 31"></path>
+                    </svg>
+                </div>
+
+                <p>
+                    <strong>Handcrafted</strong>
+                    <span>with Love</span>
+                </p>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <svg viewBox="0 0 48 48" aria-hidden="true">
+                        <circle cx="24" cy="16" r="11"></circle>
+                        <path d="M17 25 L14 43 L24 37 L34 43 L31 25"></path>
+                        <path d="M24 9 L27 14 L33 15 L29 19 L30 25 L24 22 L18 25 L19 19 L15 15 L21 14 Z"></path>
+                    </svg>
+                </div>
+
+                <p>
+                    <strong>Premium</strong>
+                    <span>Quality</span>
+                </p>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <svg viewBox="0 0 48 48" aria-hidden="true">
+                        <path d="M11 19 L24 6 L37 19 L34 38 H14 Z"></path>
+                        <path d="M18 24 V32"></path>
+                        <path d="M24 24 V32"></path>
+                        <path d="M30 24 V32"></path>
+                    </svg>
+                </div>
+
+                <p>
+                    <strong>Wide Variety</strong>
+                    <span>to Choose From</span>
+                </p>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <svg viewBox="0 0 48 48" aria-hidden="true">
+                        <path d="M24 42 S5 30 5 17 C5 5 19 3 24 14 C29 3 43 5 43 17 C43 30 24 42 24 42 Z"></path>
+                    </svg>
+                </div>
+
+                <p>
+                    <strong>Happiness</strong>
+                    <span>in Every Bite</span>
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- SIMPLE SHOP DESTINATIONS -->
+        <section class="shop-intro" id="shop">
+
+            <p class="section-eyebrow">MADE WITH LOVE</p>
+
+            <h2>Something Sweet Awaits</h2>
+
+            <p>
+                Discover little moments of happiness, freshly baked
+                just for you.
+            </p>
+
+            <div class="category-links">
+
+                <a href="#cookies" id="cookies">
+                    Explore Cookies →
+                </a>
+
+                <a href="#cakes" id="cakes">
+                    Explore Cakes →
+                </a>
+
+                <a href="#pastries" id="pastries">
+                    Explore Pastries →
+                </a>
+
+            </div>
+
+        </section>
+
+<!-- START PRODUCT SECTIONS -->
+
+<!-- COOKIES SECTION -->
+<section id="cookies" class="products-section">
+
+  <div class="section-heading">
+    <p class="section-eyebrow">FRESHLY BAKED WITH LOVE</p>
+    <h2>Our Cookies 🍪</h2>
+    <p>Little bites of happiness, baked fresh for you.</p>
+  </div>
+
+  <div class="products-grid">
+
+    <!-- Cookie 1 -->
+    <article class="product-card">
+      <img src="images/chocolate-chip-cookies.jpeg"
+           alt="Chocolate Chip Cookies">
+      <div class="product-info">
+        <h3>Chocolate Chip Cookies</h3>
+        <p>Golden cookies filled with delicious chocolate chips.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹49</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cookie 2 -->
+    <article class="product-card">
+      <img src="images/Maddiiee cookies.jpeg"
+           alt="Maddiiee Cookies">
+      <div class="product-info">
+        <h3>Maddiiee Cookies</h3>
+        <p>A special signature cookie made with love.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹49</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cookie 3 -->
+    <article class="product-card">
+      <img src="images/saffoo-cookies.jpeg"
+           alt="Saffoo Cookies">
+      <div class="product-info">
+        <h3>Saffoo Cookies</h3>
+        <p>A delightful cookie for your sweet cravings.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹49</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cookie 4 -->
+    <article class="product-card">
+      <img src="images/san-doublechocolate.jpeg"
+           alt="San Double Chocolate Cookies">
+      <div class="product-info">
+        <h3>Sann Cookies</h3>
+        <p>Rich double-chocolate goodness in every bite.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹59</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cookie 5 -->
+    <article class="product-card">
+      <img src="images/bisscoff-bliss-cookies.jpeg"
+           alt="Biscoff Bliss Cookies">
+      <div class="product-info">
+        <h3>Biscoff Bliss Cookies</h3>
+        <p>A delicious cookie with a Biscoff-inspired flavour.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹59</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cookie 6 -->
+    <article class="product-card">
+      <img src="images/classic-butter-cookies.jpeg"
+           alt="Classic Butter Cookies">
+      <div class="product-info">
+        <h3>Classic Butter Cookies</h3>
+        <p>Classic buttery cookies with a delicate crunch.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹39</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cookie 7 -->
+    <article class="product-card">
+      <img src="images/white-chocolate-cookies.jpeg"
+           alt="White Chocolate Cookies">
+      <div class="product-info">
+        <h3>White Chocolate Cookies</h3>
+        <p>Sweet cookies with creamy white chocolate.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹59</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cookie 8 -->
+    <article class="product-card">
+      <img src="images/oreo-herbs-cookies.jpeg"
+           alt="Oreo Herbs Cookies">
+      <div class="product-info">
+        <h3>Oreo Herbs Cookies</h3>
+        <p>A unique cookie inspired by Oreo flavours.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹49</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cookie 9 -->
+    <article class="product-card">
+      <img src="images/peanut-butter-cookies.jpeg"
+           alt="Peanut Butter Cookies">
+      <div class="product-info">
+        <h3>Peanut Butter Cookies</h3>
+        <p>Nutty, rich cookies with a peanut-butter flavour.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹49</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Cookie 10 -->
+    <article class="product-card">
+      <img src="images/salted-caramel-cookies.jpeg"
+           alt="Salted Caramel Cookies">
+      <div class="product-info">
+        <h3>Salted Caramel Cookies</h3>
+        <p>A sweet and salty caramel-inspired treat.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹59</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- PASTRIES SECTION -->
+<section id="pastries" class="products-section">
+
+  <div class="section-heading">
+    <p class="section-eyebrow">A LITTLE SLICE OF JOY</p>
+    <h2>Our Pastries 🥐</h2>
+    <p>Delicious layers and delightful flavours.</p>
+  </div>
+
+  <div class="products-grid">
+
+    <!-- Pastry 11 -->
+    <article class="product-card">
+      <img src="images/chocolate-velvet-pastry.jpeg"
+           alt="Chocolate Velvet Pastry">
+      <div class="product-info">
+        <h3>Chocolate Velvet Pastry</h3>
+        <p>A rich chocolate pastry for chocolate lovers.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹79</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Pastry 12 -->
+    <article class="product-card">
+      <img src="images/strawberry-kiss-pastry.jpeg"
+           alt="Strawberry Kiss Pastry">
+      <div class="product-info">
+        <h3>Strawberry Kiss Pastry</h3>
+        <p>A sweet pastry with a strawberry-inspired flavour.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹79</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Pastry 13 -->
+    <article class="product-card">
+      <img src="images/pineapple-paradise-pastry.jpeg"
+           alt="Pineapple Paradise Pastry">
+      <div class="product-info">
+        <h3>Pineapple Paradise Pastry</h3>
+        <p>A refreshing pastry with a tropical pineapple flavour.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹69</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Pastry 14 -->
+    <article class="product-card">
+      <img src="images/kulsum-eclair.jpeg"
+           alt="Kulsum Éclair">
+      <div class="product-info">
+        <h3>Kulsum Éclair</h3>
+        <p>A delicate éclair for a special sweet moment.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹69</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Pastry 15 -->
+    <article class="product-card">
+      <img src="images/butter-croissant.jpeg"
+           alt="Butter Croissant">
+      <div class="product-info">
+        <h3>Butter Croissant</h3>
+        <p>A buttery pastry with delicate, flaky layers.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹59</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Pastry 16 -->
+    <article class="product-card">
+      <img src="images/red-velvet-pastry.jpeg"
+           alt="Red Velvet Pastry">
+      <div class="product-info">
+        <h3>Red Velvet Pastry</h3>
+        <p>A soft red velvet treat for your sweet cravings.</p>
+        <div class="product-bottom">
+          <span class="product-price">₹79</span>
+          <button class="add-to-cart" type="button">Add to Cart +</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- CAKES SECTION -->
+<section id="cakes" class="products-section">
+
+  <div class="section-heading">
+    <p class="section-eyebrow">MADE FOR YOUR SPECIAL MOMENTS</p>
+    <h2>Our Cakes 🎂</h2>
+    <p>Our cake collection is coming soon. Stay tuned!</p>
+  </div>
+
+</section>
+
+<!-- END PRODUCT SECTIONS -->
+
+        <!-- ABOUT -->
+        <section class="about-section" id="about">
+
+            <p class="section-eyebrow">OUR LITTLE BAKERY</p>
+
+            <h2>Baked with Heart</h2>
+
+            <p>
+                At Crumb &amp; Co., we believe that the sweetest moments
+                are often the simplest ones. Every treat is inspired by
+                the joy of sharing something delicious.
+            </p>
+
+            <p class="about-signature">
+                With love, <span>by MRYM</span> ♡
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer" id="contact">
+
+        <a href="#home" class="footer-brand">
+            Crumb &amp; Co.
+        </a>
+
+        <p>Bakery &amp; Patisserie</p>
+
+        <p class="footer-creator">
+            A little sweetness, <span>by MRYM</span> ♡
+        </p>
+
+        <p class="copyright">
+            © <span id="currentYear"></span> Crumb &amp; Co.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- SIMPLE CART PANEL -->
+    <div class="cart-panel" id="cartPanel" hidden>
+
+        <div class="cart-panel-header">
+
+            <h2>Your Basket</h2>
+
+            <button
+                type="button"
+                id="closeCart"
+                class="close-button"
+                aria-label="Close basket"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <p>
+            Your basket is currently empty. Discover something sweet!
+        </p>
+
+        <a href="#shop" class="button button-primary" id="continueShopping">
+            Explore Menu →
+        </a>
+
+    </div>
+</body>
+</html>
